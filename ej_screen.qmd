@@ -1,0 +1,61 @@
+---
+title: "EDS 223 Homework Assignment 1"
+subtitle: "Map Making Practice"
+author: "Farah Stack"
+date: 2026-10-06
+execute:
+  eval: true
+format:
+  pdf:
+    toc: false
+    mainfont: Times New Roman
+options:
+  chunk_output_type: console
+---
+
+## Upload packages and read in data
+```{r}
+library(tidyverse)
+library(sf)
+library(here)
+library(stars)
+library(tmap)
+
+# read in geodatabase of EJScreen data at the Census Block Group level
+ejscreen <- sf::st_read(here::here("data", "ejscreen","EJSCREEN_2023_BG_StatePct_with_AS_CNMI_GU_VI.gdb")) 
+
+# filter to a state you are interested in
+colorado <- ejscreen %>%
+  dplyr::filter(ST_ABBREV == "CO") 
+
+# filter to a county you are interested in
+denver <- ejscreen %>%
+  dplyr::filter(CNTY_NAME %in% c("Denver County"))
+
+# find the average values for all variables within counties
+colorado_counties <- aggregate(colorado, by = list(colorado$CNTY_NAME), FUN = mean)
+```
+
+- Create two maps that comunicate with an environmental justice issue
+- Write a brief paragraph explaining what the maps communicate
+
+All maps must include the following elements:
+- an informative title
+- legends with legible titles, including units
+- indication of scale and orientation (i.e. graticules/gridlines or scale bar and compass)
+- color scales that are accessible (i.e. make intuitive sense) and appropriate to the data (i.e. discrete vs. continuous)
+
+## Map 1: PM 2.5 Levels in Denver County
+```{r}
+tm_shape(denver) +
+    tm_polygons(
+      fill = "PM25",
+      fill.scale= tm_scale(values = c("green", "orange")),
+      fill.legend = tm_legend(title = "PM 2.5 Levels in Denver County (𝝁𝐠/𝐦𝟑)"),
+      size.legend = tm_legend(orientation = "portrait"),
+      position = tm_pos_out("right") +
+      tm_scalebar() +
+      tm_compass())
+```
+
+
