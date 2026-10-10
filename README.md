@@ -9,14 +9,27 @@ The goal of this analysis is to explore potential patterns of environmental ineq
 
 ## Repository Contents
 - *Quarto document (.qmd)*: R code, maps, and written analysis.
+- *git.ignore*: Excludes locally stores files from Git version control.
 - *README.md*: Project overview, data information, and references.
 
 ## Data
 *Source*: U.S. Environmental Protection Agency (EPA), EJScreen 2023.
 
-The analysis uses census block group-level EJScreen data filtered to Denver County, Colorado.
+The analysis uses census block group-level EJScreen data filtered to Denver County, Colorado. The dataset includes environmental and demographic indicators used to evaluate environmental justice concerns.
 
-The dataset includes environmental and demographic indicators used to evaluate potential environmental injustices.
+The dataset files are used for the analysis and supporting documentation:
+- *EJSCREEN_2023_BG_StatePct_with_AS_CNMI_GU_VI.gdb* - Geodatabase containing environmental and demographic data
+
+- *ejscreen-tech-doc-version-2-2.pdf* - EJScreen technical documentation.
+
+- *EJSCREEN_2023_BG_Columns.xlsx* - Dataset column descriptions.
+
+# Reproducing the Analysis
+1. Clone of download this GitHub repository
+2. Download the 2023 EJScreen dataset and place the geodatabse in the `data/ejscreen`/directory.
+3. Open the Quarto (.qmd) document in an R-compatible environment.
+4. Install the required R packages.
+5. Run the code and render the Quarto document to generate the maps and accompanying analysis.
 
 # Methods
 Spatial data were processed and visualized in R using the following packages:
