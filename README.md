@@ -24,14 +24,14 @@ The dataset files are used for the analysis and supporting documentation:
 
 - *EJSCREEN_2023_BG_Columns.xlsx* - Dataset column descriptions.
 
-# Reproducing the Analysis
+## Reproducing the Analysis
 1. Clone of download this GitHub repository
 2. Download the 2023 EJScreen dataset and place the geodatabse in the `data/ejscreen`/directory.
 3. Open the Quarto (.qmd) document in an R-compatible environment.
 4. Install the required R packages.
 5. Run the code and render the Quarto document to generate the maps and accompanying analysis.
 
-# Methods
+## Methods
 Spatial data were processed and visualized in R using the following packages:
 - `tidyverse`
 - `sf`
@@ -40,13 +40,13 @@ Spatial data were processed and visualized in R using the following packages:
 - `tmap`
 - `RColorBrewer`
 
-# Author
+## Author
 Farah Stack
 
-# References
+## References
 U.S. Environmental Protection Agency. (2023). _EJScreen: Environmental Justice Screening and Mapping Tool._ https://www.epa.gov.ejscreen
 
 UCSB Master of Environmental Data Science. _EDS 223: Geospatial Analysis and Remote Sensing_. https://eds-223-geospatial.github.io.
 
-# Acknowledgements
+## Acknowledgements
 Special thanks to Professor Annie Adams and Teaching Assistant Mary Salami for their instruction and guidance throughout EDS 223. Additional appreciation goes to the *UCSB Meds Class of 2027 cohort* for their collaboration, shared learning, and support.
