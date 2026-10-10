@@ -50,7 +50,7 @@ tm_shape(denver) +
       )
 ```
 
-## Map 2: Communities of Color in Denver County
+## Map 2: Unemployment in Denver County
 ```{r}
 tm_shape(denver) +
     tm_polygons('UNEMPLOYED',
