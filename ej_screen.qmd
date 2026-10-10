@@ -20,6 +20,7 @@ library(sf)
 library(here)
 library(stars)
 library(tmap)
+library(RColorBrewer)
 
 # read in geodatabase of EJScreen data at the Census Block Group level
 ejscreen <- sf::st_read(here::here("data", "ejscreen","EJSCREEN_2023_BG_StatePct_with_AS_CNMI_GU_VI.gdb")) 
@@ -48,14 +49,34 @@ All maps must include the following elements:
 ## Map 1: PM 2.5 Levels in Denver County
 ```{r}
 tm_shape(denver) +
-    tm_polygons(
-      fill = "PM25",
-      fill.scale= tm_scale(values = c("green", "orange")),
-      fill.legend = tm_legend(title = "PM 2.5 Levels in Denver County (𝝁𝐠/𝐦𝟑)"),
-      size.legend = tm_legend(orientation = "portrait"),
-      position = tm_pos_out("right") +
+    tm_polygons('PM25', palette = "YlOrRd", title = "PM 2.5 (µg/m³)") +
       tm_scalebar() +
-      tm_compass())
+      tm_compass() +
+      tm_layout(
+        main.title = "PM 2.5 Air Pollution in Denver County",
+        main.title.size= 1.1,
+        legend.outside = TRUE
+      )
 ```
 
+## Map 2: Communities of Color in Denver County
+```{r}
+tm_shape(denver) +
+    tm_polygons('UNEMPLOYED',
+    palette = "Blues",
+    style = "cont",
+    title = "Unemployment (%)") +
+    tm_scalebar() +
+    tm_compass() +
+    tm_layout(
+      main.title = "Unemployment in Denver County",
+      main.title.size = 1.1,
+      legend.outside = TRUE
+    )
+```
 
+These maps explore environmental justice in Denver County, by comparing particulate matter (PM 2.5) concentrations and unemployment rates across census block groups.
+
+Map #1 illustrates the geographic distribution of air pollution, while the second highlights differences in socioeconomic conditions. Together, these maps help examine whether communities experiencing higher unemployment rates may also face greater exposure to air pollition.
+
+Identifying areas where these conditions overlap can raise important questions about environmental inequities. It is important to note that these maps alone do not establish a relationship between unemployment and pollution exposure.
