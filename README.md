@@ -25,8 +25,8 @@ The dataset files are used for the analysis and supporting documentation:
 - *EJSCREEN_2023_BG_Columns.xlsx* - Dataset column descriptions.
 
 ## Reproducing the Analysis
-1. Clone of download this GitHub repository
-2. Download the 2023 EJScreen dataset and place the geodatabse in the `data/ejscreen`/directory.
+1. Clone or download this GitHub repository
+2. Download the 2023 EJScreen dataset and place the geodatabse in a `data/ejscreen`/directory.
 3. Open the Quarto (.qmd) document in an R-compatible environment.
 4. Install the required R packages.
 5. Run the code and render the Quarto document to generate the maps and accompanying analysis.
