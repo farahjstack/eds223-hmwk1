@@ -49,7 +49,7 @@ All maps must include the following elements:
 ## Map 1: PM 2.5 Levels in Denver County
 ```{r}
 tm_shape(denver) +
-    tm_polygons('PM25', palette = "YlOrRd", title = "PM 2.5 (µg/m³)") +
+    tm_polygons('PM25', palette = "YlOrRd", title = "PM2.5 (µg/m³)") +
       tm_scalebar() +
       tm_compass() +
       tm_layout(
@@ -75,8 +75,8 @@ tm_shape(denver) +
     )
 ```
 
-These maps explore environmental justice in Denver County, by comparing particulate matter (PM 2.5) concentrations and unemployment rates across census block groups.
+These maps explore potential environmental justice concerns in Denver County, by comparing particulate matter (PM2.5) concentrations and unemployment rates across census block groups.
 
 Map #1 illustrates the geographic distribution of air pollution, while the second highlights differences in socioeconomic conditions. Together, these maps help examine whether communities experiencing higher unemployment rates may also face greater exposure to air pollition.
 
-Identifying areas where these conditions overlap can raise important questions about environmental inequities. It is important to note that these maps alone do not establish a relationship between unemployment and pollution exposure.
+Identifying areas where these conditions overlap can raise important questions about environmental injustices and associated environmental health related-risks. It is important to note that these maps alone do not establish a relationship between unemployment and pollution exposure.
