@@ -37,15 +37,6 @@ denver <- ejscreen %>%
 colorado_counties <- aggregate(colorado, by = list(colorado$CNTY_NAME), FUN = mean)
 ```
 
-- Create two maps that comunicate with an environmental justice issue
-- Write a brief paragraph explaining what the maps communicate
-
-All maps must include the following elements:
-- an informative title
-- legends with legible titles, including units
-- indication of scale and orientation (i.e. graticules/gridlines or scale bar and compass)
-- color scales that are accessible (i.e. make intuitive sense) and appropriate to the data (i.e. discrete vs. continuous)
-
 ## Map 1: PM 2.5 Levels in Denver County
 ```{r}
 tm_shape(denver) +
