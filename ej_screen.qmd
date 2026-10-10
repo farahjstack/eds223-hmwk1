@@ -68,6 +68,6 @@ tm_shape(denver) +
 
 These maps explore potential environmental justice concerns in Denver County, by comparing particulate matter (PM2.5) concentrations and unemployment rates across census block groups.
 
-Map #1 illustrates the geographic distribution of air pollution, while the second highlights differences in socioeconomic conditions. Together, these maps help examine whether communities experiencing higher unemployment rates may also face greater exposure to air pollition.
+Map #1 illustrates the geographic distribution of air pollution, while the second highlights differences in socioeconomic conditions. Together, these maps help examine whether communities experiencing higher unemployment rates may also face greater exposure to air pollution.
 
 Identifying areas where these conditions overlap can raise important questions about environmental injustices and associated environmental health related-risks. It is important to note that these maps alone do not establish a relationship between unemployment and pollution exposure.
