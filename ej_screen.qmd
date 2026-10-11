@@ -1,21 +1,3 @@
----
-title: "EDS 223 HMWK 1 "
-subtitle: "Exploring Environmental Injustices in Denver County"
-author: "Farah Stack"
-date: 2026-10-09
-format:
-  html: default
-  typst: default
-format-links: [typst]
-execute:
-  message: false
-  warning: false  
----
-
-```{r}
-#| message: false
-#| warning: false
-```
 
 ## Upload packages and read in data
 ```{r}
